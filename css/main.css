@@ -1,0 +1,329 @@
+/* 
+    Document   : main
+    Created on : Aug 28, 2014, 11:45:51 AM
+    Author     : hino7302
+    Description:
+        Purpose of the stylesheet follows.
+*/
+html {
+   width: 100%; height: 100%; 
+}
+body {
+    height: 100%; width: 100%; margin: 0;
+}
+root { 
+    display: block;
+}
+
+#main {
+    width: 100%;  height: 100%;
+    top: 0; left: 0; margin: 0;
+    font-family: 'Roboto Condensed', sans-serif;
+    
+}
+
+.mainNav{
+    position: absolute;
+    height: 215px; width: 410px;
+    left: 40%; top: 50%;
+    z-index: 1;
+    margin-left: -205px; margin-top: -107.5px;
+    -webkit-transform: scale(1.25);
+    -moz-transform: scale(1.25);
+    -o-transform: scale(1.25);
+    transform: scale(1.25);
+    
+}
+
+#insideCorner {
+    position: absolute; 
+}
+
+#insideCorner text {
+    position: absolute; opacity: 0; visibility: hidden;
+}
+
+#circleIcon {
+    cursor: pointer;
+}
+
+.textPages {
+    cursor: pointer;
+}
+
+#content {
+    width: 80%; height: 100%;
+    position: relative; left: 15%;
+}
+#header {
+    width: 100%; height: 10%;
+    position: relative; display: block;
+    text-align: center; border-bottom: 2px black solid;
+    opacity: 0;
+}
+
+#header svg text {
+    opacity: 0;
+}
+
+#mainContent {
+    width: 100%; height: 95%; opacity: 0;
+}
+
+#fillContent {
+    position: relative; top: 1%; left: 5%;
+}
+
+#innerContent h3, #innerContent p {
+    margin-right: 20px;
+}
+
+@keyframes scaleNav {
+    from {
+    -webkit-transform: scale(1.25);
+    -o-transform: scale(1.25);
+    -moz-transform: scale(1.25);
+    transform: scale(1.25);
+} to{
+    -webkit-transform: scale(0.5);
+    -o-transform: scale(0.5);
+    -moz-transform: scale(0.5);
+    transform: scale(0.5);
+}
+}
+
+#scaleDown {
+    -webkit-animation-name: scaleNav;
+    -o-animation-name: scaleNav;
+    -moz-animation-name: scaleNav;
+    animation-name: scaleNav;
+    animation-duration: 2s;
+    -webkit-animation-duration: 2s;
+    -o-animation-duration: 2s;
+    -moz-animation-duration: 2s;
+    -webkit-transform: scale(0.5);
+    -o-transform: scale(0.5);
+    -moz-transform: scale(0.5);
+    transform: scale(0.5);
+}
+
+#container {
+	width: 80%; display: block; height: auto;
+}
+
+#container #gallery {
+	display: block;
+	width: 100%;
+	height: auto;
+}
+
+#container #gallery figure, #gallery div {
+    width: 45%;
+	display: inline-block;
+	margin-bottom: 10px; margin-right: 10px;
+}
+
+#container #gallery figure img, #gallery div img {
+	width: 100%;
+}
+
+
+/*
+#container {
+    position: relative; left: 28%;
+    border: 1px blue solid;
+    width: 380px; height: 250px;
+    -moz-perspective: 800px;
+    -o-perspective: 800px;
+    -webkit-perspective: 800px;
+    perspective: 800px;
+}
+
+#gallery {
+    position: absolute;
+    width: 100%; height: 100%;
+    -webkit-transform-style: preserve-3d;
+    -o-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -webkit-transform: rotateY(0deg) translateZ(-360px);
+    -o-transform: rotateY(0deg) translateZ(-360px);
+    -moz-transform: rotateY(0deg) translateZ(-360px);
+    transform: rotateY(0deg) translateZ(-360px);
+    -webkit-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    transition: all 1s ease;
+}
+#gallery figure {
+    display: block; margin: 0px;
+    border: 1px black solid;
+    width: 378px; height: 248px;
+    position: absolute;
+}
+
+#gallery figure img {
+    width: 100%; height: 100%;
+}
+
+#gallery figure:nth-child(1){
+    -webkit-transform: rotateY(0deg) translateZ(360px);
+    -o-transform: rotateY(0deg) translateZ(360px);
+    -moz-transform: rotateY(0deg) translateZ(360px);
+    transform: rotateY(0deg) translateZ(360px);
+}
+#gallery figure:nth-child(2){
+    -webkit-transform: rotateY(60deg) translateZ(360px);
+    -o-transform: rotateY(60deg) translateZ(360px);
+    -moz-transform: rotateY(60deg) translateZ(360px);
+    transform: rotateY(60deg) translateZ(360px);
+}
+#gallery figure:nth-child(3){
+    -webkit-transform: rotateY(120deg) translateZ(360px);
+    -o-transform: rotateY(120deg) translateZ(360px);
+    -moz-transform: rotateY(120deg) translateZ(360px);
+    transform: rotateY(120deg) translateZ(360px);
+}
+#gallery figure:nth-child(4){
+    -webkit-transform: rotateY(180deg) translateZ(360px);
+    -o-transform: rotateY(180deg) translateZ(360px);
+    -moz-transform: rotateY(180deg) translateZ(360px);
+    transform: rotateY(180deg) translateZ(360px);
+}
+#gallery figure:nth-child(5){
+    -webkit-transform: rotateY(240deg) translateZ(360px);
+    -o-transform: rotateY(240deg) translateZ(360px);
+    -moz-transform: rotateY(240deg) translateZ(360px);
+    transform: rotateY(240deg) translateZ(360px);
+}
+#gallery figure:nth-child(6){
+    -webkit-transform: rotateY(300deg) translateZ(360px);
+    -o-transform: rotateY(300deg) translateZ(360px);
+    -moz-transform: rotateY(300deg) translateZ(360px);
+    transform: rotateY(300deg) translateZ(360px);
+}
+*/
+
+.intro {
+    position: relative; display: block;
+    width: 80%; height: 100%;
+}
+
+.intro p {
+    font-size: 1.2em; text-align: justify;
+}
+.intro p a {
+    text-decoration: none;
+}
+.intro p:hover a {
+    color: #4c924c;
+}
+
+.fun-projects {
+    font-size: 20px; margin: 20px 0 0 0;
+    cursor: pointer;
+}
+
+.projects {
+    cursor: pointer; display: block; position: relative;
+    left: 20px; 
+}
+
+.projects a {
+    text-decoration: none; color: black;
+}
+
+.projects:hover a {
+    color: #4c924c;
+}
+
+@media all and (min-width: 700px) and (min-height: 1024px){
+    #container {
+        left: 15%;
+    }
+    #content {
+        left: 20%; overflow-x: hidden;
+    }
+    #header {
+        height: 5%;
+    }
+    
+}
+
+@media all and (min-width: 1200px){
+    
+  
+    @keyframes scaleNav {
+    from {
+    -webkit-transform: scale(1);
+    -o-transform: scale(1);
+    -moz-transform: scale(1);
+    transform: scale(1);
+} to{
+    -webkit-transform: scale(0.75);
+    -o-transform: scale(0.75);
+    -moz-transform: scale(0.75);
+    transform: scale(0.75);
+}
+}
+
+#scaleDown {
+    -webkit-animation-name: scaleNav;
+    -o-animation-name: scaleNav;
+    -moz-animation-name: scaleNav;
+    animation-name: scaleNav;
+    animation-duration: 2s;
+    -webkit-animation-duration: 2s;
+    -o-animation-duration: 2s;
+    -moz-animation-duration: 2s;
+    -webkit-transform: scale(0.75);
+    -o-transform: scale(0.75);
+    -moz-transform: scale(0.75);
+    transform: scale(0.75);
+}
+
+
+}
+
+/* @media all and (min-width: 1600px){
+    
+} */
+@media all and (min-width: 1920px) and (min-height: 800px){
+    
+    .mainNav {
+        -webkit-transform: scale(2);
+        -moz-transform: scale(2);
+        -o-transform: scale(2);
+        transform: scale(2);
+    }
+    @keyframes scaleNav {
+    from {
+    -webkit-transform: scale(2);
+    -o-transform: scale(2);
+    -moz-transform: scale(2);
+    transform: scale(2);
+} to{
+    -webkit-transform: scale(1);
+    -o-transform: scale(1);
+    -moz-transform: scale(1);
+    transform: scale(1);
+}
+}
+
+#scaleDown {
+    -webkit-animation-name: scaleNav;
+    -o-animation-name: scaleNav;
+    -moz-animation-name: scaleNav;
+    animation-name: scaleNav;
+    animation-duration: 2s;
+    -webkit-animation-duration: 2s;
+    -o-animation-duration: 2s;
+    -moz-animation-duration: 2s;
+    -webkit-transform: scale(1);
+    -o-transform: scale(1);
+    -moz-transform: scale(1);
+    transform: scale(1);
+}
+
+} 
+
